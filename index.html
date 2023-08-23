@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic Chat App</title>
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="home"></div>
+  <div>
+    <h2>Chat</h2>
+    <div id="chat-window" style="background-color: lightgray;"></div>
+    <textarea type="text" id="message-input" placeholder="Type your message"></textarea>
+    <button id="send-button">Send</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-database.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
