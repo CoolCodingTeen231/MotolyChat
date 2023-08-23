@@ -13,6 +13,13 @@
       if (snapshot.val() === 1) audioPlayer.play();
       else if (snapshot.val() === 0) audioPlayer.pause(), audioPlayer.currentTime = 0;
     });
+
+    messageInput.addEventListener("keydown", (event) => {
+        if (event.keyCode === 13) { // Check if Enter key is pressed
+            event.preventDefault(); // Prevent the newline character from being inserted
+            sendButton.click(); // Simulate a click on the sendButton
+        }
+    });
   
     firebase.auth().onAuthStateChanged(user => {
       if (!user) location.href = "signup.html";
