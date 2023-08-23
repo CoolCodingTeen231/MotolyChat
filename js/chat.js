@@ -74,7 +74,7 @@
     });
   
     async function sendMessage(senderUsername) {
-      const messageContent = messageInput.value;
+      const messageContent = messageInput.value.replaceAll(":skull:", "💀");
       if (messageContent) {
         try {
           await chatMessagesRef.push({ sender: senderUsername, content: messageContent, timestamp: firebase.database.ServerValue.TIMESTAMP });
